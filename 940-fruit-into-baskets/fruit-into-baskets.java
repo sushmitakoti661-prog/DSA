@@ -1,10 +1,10 @@
 class Solution {
     public int totalFruit(int[] fruits) {
-        int l=0, r=0;
+        int l=0;
         int ans=0;
-        HashMap<Integer, Integer> map= new HashMap<>();
+        HashMap<Integer,Integer> map= new HashMap<>();
 
-        for(r=0; r<fruits.length; r++){
+        for(int r=0; r<fruits.length; r++){
             map.put(fruits[r], map.getOrDefault(fruits[r],0)+1);
 
             while(map.size()>2){
